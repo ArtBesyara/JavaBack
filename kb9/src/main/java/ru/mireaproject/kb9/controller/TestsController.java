@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-import ru.mireaproject.kb9.service.TestServiceI;
+import ru.mireaproject.kb9.service.TestServiceInterface;
 import ru.mireaproject.kb9.dto.TestsDTO;
-import ru.mireaproject.kb9.model.Tests;
+import ru.mireaproject.kb9.entity.DifficultyLevel;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,33 +26,34 @@ import java.util.stream.Collectors;
 public class TestsController {
     
     @Autowired
-    private TestServiceI testService;
+    private TestServiceInterface testService;
 
     @PostMapping("/add")
-    public ResponseEntity<Tests> postAddTests(@RequestBody Tests entity) {
-        System.out.println(entity); 
-        testService.addTest(entity);
-        return ResponseEntity.ok().build();
+    public Long postAddTests(@RequestBody TestsDTO testsDTO) {
+        return testService.addTest(testsDTO.toTests());
     }
 
 
     @GetMapping
     public List<TestsDTO> tests() {
-    return this.testService.getTest().stream()
-        .map(TestsDTO::from) // Преобразуем каждый Tests в TestsDTO
-        .collect(Collectors.toList()); // Собираем обратно в список
+        return this.testService.getTest().stream()
+        .map(TestsDTO::from)
+        .collect(Collectors.toList());
     }
 
+
     @GetMapping("/find")
-    public ResponseEntity<Tests> getTestByName(@RequestParam String nameTest) {
-        return ResponseEntity.ok(testService.getTestByName(nameTest));
+    public ResponseEntity<TestsDTO> getTestByName(@RequestParam String nameTest, DifficultyLevel difficultyLevel) {
+        
+        TestsDTO result = TestsDTO.from(testService.getTestByName(nameTest, difficultyLevel));
+        return ResponseEntity.ok(result);
     }
-    
+
     @GetMapping("/clear")
-    public ResponseEntity<Tests> clearTests() {
-        testService.clearTests();
-        return ResponseEntity.ok().build();
+    public void testClear() {
+        this.testService.clearTests();
     }
     
+
 
 }

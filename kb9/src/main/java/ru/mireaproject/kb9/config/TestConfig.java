@@ -3,7 +3,7 @@ package ru.mireaproject.kb9.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import ru.mireaproject.kb9.model.Tests;
+import ru.mireaproject.kb9.entity.Tests;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -21,4 +21,9 @@ public class TestConfig {
     public List<Tests> getTest(){
         return this.tests;
     }
+
+    // @Bean
+    // public String getNameTest(int index){
+    //     return this.tests.get(index).getNameTest();
+    // }
 }
