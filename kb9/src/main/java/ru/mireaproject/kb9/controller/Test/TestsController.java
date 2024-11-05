@@ -1,4 +1,4 @@
-package ru.mireaproject.kb9.controller;
+package ru.mireaproject.kb9.controller.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -6,11 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
-import ru.mireaproject.kb9.service.TestServiceInterface;
-import ru.mireaproject.kb9.dto.TestsDTO;
-import ru.mireaproject.kb9.entity.DifficultyLevel;
+import ru.mireaproject.kb9.dto.Test.TestsDTO;
+import ru.mireaproject.kb9.entity.Test.DifficultyLevel;
+import ru.mireaproject.kb9.service.Test.TestServiceInterface;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

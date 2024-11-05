@@ -1,9 +1,9 @@
-package ru.mireaproject.kb9.dto;
+package ru.mireaproject.kb9.dto.Test;
 
 import lombok.Data;
-import ru.mireaproject.kb9.entity.DifficultyLevel;
-import ru.mireaproject.kb9.entity.Questions;
-import ru.mireaproject.kb9.entity.Tests;
+import ru.mireaproject.kb9.entity.Test.DifficultyLevel;
+import ru.mireaproject.kb9.entity.Test.Questions;
+import ru.mireaproject.kb9.entity.Test.Tests;
 
 import java.util.List;
 import java.util.stream.Collectors;

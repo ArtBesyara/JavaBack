@@ -1,11 +1,11 @@
-package ru.mireaproject.kb9.dao.repository;
+package ru.mireaproject.kb9.dao.repository.Test;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import ru.mireaproject.kb9.entity.DifficultyLevel;
-import ru.mireaproject.kb9.entity.Tests;
+import ru.mireaproject.kb9.entity.Test.DifficultyLevel;
+import ru.mireaproject.kb9.entity.Test.Tests;
 
 
 @Repository
