@@ -27,4 +27,10 @@ public class EventCalendarDTO {
         return eventCalendarDTO;
         
     }
+
+    public EventCalendar toEventCalendar(){
+        EventCalendar eventCalendar = new EventCalendar(this.name, this.date, this.description, this.url);
+
+        return eventCalendar;
+    }
 }

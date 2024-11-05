@@ -29,6 +29,15 @@ public class EventCalendar {
     @Column(name = "url", nullable = true)
     private URL url;
 
+    public EventCalendar(String name, LocalDate date, String description, URL url){
+        this.name = name;
+        this.date = date;
+        this.description = description;
+        this.url = url;
+    }
+
+    public EventCalendar(){}
+
     public void setId(long id){
         this.id = id;
     }
