@@ -1,4 +1,4 @@
-package ru.mireaproject.kb9.dao;
+package ru.mireaproject.kb9.dao.Test;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 
 
 import jakarta.transaction.Transactional;
-import ru.mireaproject.kb9.dao.repository.TestsRepository;
-import ru.mireaproject.kb9.entity.DifficultyLevel;
-import ru.mireaproject.kb9.entity.Tests;
+import ru.mireaproject.kb9.dao.repository.Test.TestsRepository;
+import ru.mireaproject.kb9.entity.Test.DifficultyLevel;
+import ru.mireaproject.kb9.entity.Test.Tests;
 
 
 @Repository

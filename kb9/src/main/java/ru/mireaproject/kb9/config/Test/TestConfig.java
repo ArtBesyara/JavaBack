@@ -1,9 +1,9 @@
-package ru.mireaproject.kb9.config;
+package ru.mireaproject.kb9.config.Test;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import ru.mireaproject.kb9.entity.Tests;
+import ru.mireaproject.kb9.entity.Test.Tests;
 
 import java.util.List;
 import java.util.ArrayList;

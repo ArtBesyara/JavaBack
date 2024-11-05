@@ -1,7 +1,7 @@
-package ru.mireaproject.kb9.dto;
+package ru.mireaproject.kb9.dto.Test;
 
 import lombok.Data;
-import ru.mireaproject.kb9.entity.Questions;
+import ru.mireaproject.kb9.entity.Test.Questions;
 
 import java.util.List;
 

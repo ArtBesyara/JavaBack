@@ -1,4 +1,4 @@
-package ru.mireaproject.kb9.entity;
+package ru.mireaproject.kb9.entity.Test;
 
 import java.util.List;
 

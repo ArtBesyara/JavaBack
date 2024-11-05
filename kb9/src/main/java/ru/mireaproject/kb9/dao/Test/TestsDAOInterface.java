@@ -1,9 +1,9 @@
-package ru.mireaproject.kb9.dao;
+package ru.mireaproject.kb9.dao.Test;
 
 import java.util.List;
 
-import ru.mireaproject.kb9.entity.DifficultyLevel;
-import ru.mireaproject.kb9.entity.Tests;
+import ru.mireaproject.kb9.entity.Test.DifficultyLevel;
+import ru.mireaproject.kb9.entity.Test.Tests;
 
 public interface TestsDAOInterface {
     List<Tests> getTests();
